@@ -4,10 +4,10 @@ import ObjectData.AlertObject;
 import Pages.AlertFrameWindow.AlertFrameWindowPage;
 import Pages.AlertFrameWindow.AlertPage;
 import Pages.HomePage;
-import ShareData.ShareData;
+import ShareData.Hooks;
 import org.testng.annotations.Test;
 
-public class AlertTest extends ShareData {
+public class AlertTest extends Hooks {
 
     @Test
     public void testMetoda() {

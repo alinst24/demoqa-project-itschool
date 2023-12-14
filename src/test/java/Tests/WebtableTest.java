@@ -5,8 +5,9 @@ import Pages.HomePage;
 import Pages.Elements.WebTablePage;
 import ShareData.ShareData;
 import org.testng.annotations.Test;
+import ShareData.Hooks;
 
-public class WebtableTest extends ShareData {
+public class WebtableTest extends Hooks {
 
     @Test
     public void testMetoda(){
