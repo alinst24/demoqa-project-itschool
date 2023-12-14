@@ -51,7 +51,6 @@ webTablePage.addnewEntry(webTableObject);
 
 
 
-
         // pentru a valida : trebuie sa tinem cont de ce avem initial = adica un tabel cu 3 randuri
         // trebuie sa indentificam toate randurile din tabel.   (continutul)
         // aflam cate randuri avem initial - in ctrl f ( cate avem si trebuie sa bagam +1 , pentru ca noi am mai introdus un rand)
