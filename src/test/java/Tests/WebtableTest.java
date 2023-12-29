@@ -1,6 +1,7 @@
 package Tests;
 
 import ObjectData.WebTableObject;
+import Pages.Elements.ElementsPage;
 import Pages.HomePage;
 import Pages.Elements.WebTablePage;
 import ShareData.ShareData;
@@ -10,7 +11,7 @@ import ShareData.Hooks;
 public class WebtableTest extends Hooks {
 
     @Test
-    public void testMetoda(){
+    public void testMetoda() {
 
         WebTableObject webTableObject = new WebTableObject(testData);
 
@@ -18,15 +19,18 @@ public class WebtableTest extends Hooks {
         HomePage homePage = new HomePage(getDriver());
         homePage.clickElements();
 
+        ElementsPage elementsPage = new ElementsPage(getDriver());
+        elementsPage.clickWebTables();
+
         WebTablePage webTablePage = new WebTablePage(getDriver());
-        webTablePage.clickWebTables();
+        webTablePage.addnewEntry(webTableObject);
         //        // acum ar trebuii sa stim cate elemente avem deja in tabel  si facem o lista:          (pentru validare mai tarziu)            (dupa ce am identificat lista, luam dimensiunea listei)
         // iar ulterior facem o lista cu expectedEntries, dupa ce am adaugat randul
 
 
 //        webTablePage.defaultTableSize();         // ca sa ia  cate randuri exista acum.
 //        webTablePage.clickAdd();
-               //pe astea le-am comentat pentru ca asa am facut eu prima data testul. A fost gandit altfel.
+        //pe astea le-am comentat pentru ca asa am facut eu prima data testul. A fost gandit altfel.
 
 
 //        String firstnamevalue="Stanciu"; // mereu trebuie declarate deasupra pentru ca altfel nu le citeste
@@ -38,18 +42,11 @@ public class WebtableTest extends Hooks {
 
 
 //        webTablePage.addnewEntry(firstnamevalue,prenume,emailvalue,varsta,salariuvaloare,departamentvaloare);
-webTablePage.addnewEntry(webTableObject);
+
 //        webTablePage.fillForm(firstnamevalue,prenume,emailvalue,varsta,salariuvaloare,departamentvaloare);
 //        webTablePage.submitButton();
 //        webTablePage.expectedTableSize();
 //        webTablePage.lastEntryContent(firstnamevalue,prenume,emailvalue,varsta,salariuvaloare,departamentvaloare);
-
-
-
-
-
-
-
 
 
         // pentru a valida : trebuie sa tinem cont de ce avem initial = adica un tabel cu 3 randuri

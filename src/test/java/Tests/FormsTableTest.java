@@ -17,14 +17,12 @@ public class FormsTableTest extends Hooks {
 
         FormsTableObject formsTableObject = new FormsTableObject(testData);
 
-
-
         // Doar o singura daca initiem javascriptexecutorul, in rest daca vrem sa facem mai multe scrolluri , copiem doar linia a doua din acel scroll.
         HomePage homePage = new HomePage(getDriver());
         homePage.clickForms();
 
-        FormsPage FormsPage = new FormsPage(getDriver());
-        FormsPage.clickPracticeForms();
+        FormsPage formsPage = new FormsPage(getDriver());
+        formsPage.clickPracticeForms();
 
 //        String firstNameValue = "Stanciu";
 //        String lastnamevalue = "Alin-Georgian";
@@ -35,7 +33,7 @@ public class FormsTableTest extends Hooks {
 //        String stateandcityvalue = "NCR";
 //        String cityvalue = "Delhi";
 //        String mesajasteptat = "Thanks for submitting the form";
-        String filepath= "src/test/resources/drive.txt";                            // si in caz ca vrem sa modificam vreo valoare , o facem aici din acestea toate
+//        String filepath= "src/test/resources/drive.txt";                            // si in caz ca vrem sa modificam vreo valoare , o facem aici din acestea toate
         PracticeFormPage practiceFormPage = new PracticeFormPage(getDriver());
 //        practiceFormPage.fillPracticeForm(firstNameValue, lastnamevalue, emailValue, mobilephonevalue, subjectsValue, currentadressvalue,stateandcityvalue, cityvalue);      // fiindca am apelat fillpracticeform, ne-a facut upload si la fisier, deci aici nu trebuie sa am File ca parametru
         practiceFormPage.fillPracticeForm(formsTableObject);

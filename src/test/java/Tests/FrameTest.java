@@ -3,10 +3,10 @@ package Tests;
 import Pages.AlertFrameWindow.AlertFrameWindowPage;
 import Pages.AlertFrameWindow.FramesPage;
 import Pages.HomePage;
-import ShareData.ShareData;
 import org.testng.annotations.Test;
+import ShareData.Hooks;
 
-public class FrameTest extends ShareData {
+public class FrameTest extends ShareData.Hooks {
 
     @Test
     public void testMetoda() {
@@ -17,7 +17,7 @@ public class FrameTest extends ShareData {
         // le putem identifica dupa tag-ul "<iframe"      ; il putem identifica dupa id cel mai des, dar daca nu avem id , cautam un alt atribut , sub forma de locater
 
         HomePage homePage = new HomePage(getDriver());
-        homePage.clickAlertFrameWindow();
+        homePage.clickAlertWindow();
 
         AlertFrameWindowPage alertFrameWindowPage = new AlertFrameWindowPage(getDriver());
         alertFrameWindowPage.clickFrames();

@@ -4,25 +4,28 @@ import java.util.HashMap;
 
 public class AlertObject {
 
-    private String interractAlertValue;
+    private String promptAlertValue;
 
-    public String getInterractAlertValue() {
-        return interractAlertValue;
+    public String getPromptAlertValue() {
+        return promptAlertValue;
     }
 
-    public void setInterractAlertValue(String interractAlertValue) {
-        this.interractAlertValue = interractAlertValue;
+    public void setPromptAlertValue(String promptAlertValue) {
+        this.promptAlertValue = promptAlertValue;
     }
 
-    public AlertObject(HashMap<String,String> testData){
-        populateObject(testData);
+    public AlertObject (HashMap<String, String> tesData){
+        populateObject(tesData);
+
     }
 
-    private void populateObject(HashMap<String, String> testData) {
-        for (String Key : testData.keySet()) {
+    //Facem o metoda care sa mapeze valorile din Properties la variabilele din clasa
+
+    private void populateObject(HashMap<String, String> tesData) {
+        for (String Key : tesData.keySet()) {
             switch (Key) {
-                case "interractAlertValue":
-                    setInterractAlertValue(testData.get(Key));
+                case "promptAlertValue":
+                    setPromptAlertValue(tesData.get(Key));
                     break;
             }
         }

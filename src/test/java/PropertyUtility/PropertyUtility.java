@@ -18,7 +18,7 @@ public class PropertyUtility {
     // metoda care incarca un fisier de tip "properties"
 
     private void loadDataFile(String fileName) {
-        properties = new Properties();
+        properties = new Properties();        //este obiectul care se ocupa sa ia fisierul si sa-l transforme in properties
         FileInputStream fileInputStream = null;
         try {
             fileInputStream = new FileInputStream("src/test/resources/TestData/"+fileName+"Data.properties");        // si path-urile sunt de 2 tipuri : aboslute si relative; intotdeauna sa dam pathul relativ , pt ca daca dam absolut ne da adresa de pe local

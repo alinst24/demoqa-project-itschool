@@ -1,5 +1,6 @@
 package Pages.AlertFrameWindow;
 
+import Logger.LoggerUtility;
 import Pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,9 +18,6 @@ public class FramesPage extends BasePage {
 @FindBy(id = "sampleHeading")
     private WebElement frameText;
 
-    @FindBy (id = "sampleHeading")
-    private WebElement frame2Text;
-
     public void interractFrame1(){
 //        driver.switchTo().frame("frame1");  // ne mutam cu focusul pe frame: (dupa id)
 //        System.out.println(frameText.getText()); // asta e ca sa vedem ca l-a identificat
@@ -27,7 +25,11 @@ public class FramesPage extends BasePage {
 //        driver.switchTo().defaultContent();
 //
         frameMethods.switchToFrame("frame1");
+        LoggerUtility.info("The user clicks on specific frame.");
+        System.out.println(frameText.getText());
+        LoggerUtility.info("The user prints the frameText value");
         frameMethods.switchMainFrame();
+        LoggerUtility.info("The user switches back to primary frame.");
     }
 
     public void interractFrame2(){
@@ -35,6 +37,8 @@ public class FramesPage extends BasePage {
 //        System.out.println(frame2Text.getText());
 
         frameMethods.switchToFrame("frame2");
+        LoggerUtility.info("The user switches on the second frame.");
+        System.out.println(frameText.getText());
+        LoggerUtility.info("The user prints the frameText value");
     }
-
 }

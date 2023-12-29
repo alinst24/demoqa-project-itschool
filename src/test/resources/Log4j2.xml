@@ -2,7 +2,23 @@
 <!-- Extra logging related to initialization of Log4j.
  Set to debug or trace if log4j initialization is failing. -->
 <Configuration status="warn">
+    <!-- contentul la acest log4j2.xml este compus din 2 bucati : appenderi si loggeri. -->
     <Appenders>
+        <!-- Parallel version of logging -->
+        <Routing name="RoutingAppender">
+            <Routes pattern="$${ctx:threadName}">
+                <Route>
+                    <File
+                            fileName="target/logs/suite/${ctx:threadName}.log"
+                            name="appender-${ctx:threadName}"
+                            append="false">
+                        <PatternLayout>
+                            <Pattern>[%date{ISO8601}][%-5level][%t] %m%n</Pattern>
+                        </PatternLayout>
+                    </File>
+                </Route>
+            </Routes>
+        </Routing>
         <!-- Console appender configuration -->
         <Console name="console" target="SYSTEM_OUT">
             <PatternLayout
@@ -11,8 +27,9 @@
     </Appenders>
     <Loggers>
         <!-- Root logger referring to console appender -->
-        <Root level="info" additivity="false">
+        <Root level="info">
             <AppenderRef ref="console" />
+            <AppenderRef ref="RoutingAppender"/>
         </Root>
     </Loggers>
 </Configuration>

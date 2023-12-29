@@ -16,7 +16,7 @@ public class AlertTest extends Hooks {
 
 
         HomePage homePage = new HomePage(getDriver());             // in fiecare pagina facem un obiect , si pe acel obiect apelam metoda specifica. ; deci dupa fiecare metoda de test facuta , venim in pagina curenta si facem obiect si chemam metoda
-        homePage.clickAlertFrameWindow();
+        homePage.clickAlertWindow();
 
         AlertFrameWindowPage alertFrameWindowPage = new AlertFrameWindowPage(getDriver());
         alertFrameWindowPage.clickAlerts();

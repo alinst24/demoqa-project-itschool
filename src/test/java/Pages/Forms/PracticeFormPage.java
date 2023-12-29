@@ -1,5 +1,6 @@
 package Pages.Forms;
 
+import Logger.LoggerUtility;
 import ObjectData.FormsTableObject;
 import Pages.BasePage;
 import org.openqa.selenium.*;
@@ -68,7 +69,7 @@ public class PracticeFormPage extends BasePage {
     private List<WebElement> validationTable;
 
     @FindBy(id = "closeLargeModal")
-    private WebElement closepopup;
+    private WebElement closeButton;
 
 
 //    public void fillPracticeForm(String firstName, String lastName, String email, String mobilephone, String subjects, String address, String state, String city){
@@ -109,48 +110,66 @@ public void fillPracticeForm(FormsTableObject formsTableObject){
     public void fillFirstName(String firstNameValue){
 //        firstname.sendKeys(firstNameValue);
         elementMethods.fillElement(firstname,firstNameValue);
+        LoggerUtility.info("The user fills First Name with value : "+firstNameValue);
     }
 
     public void fillLastName(String lastNameValue){
-        lastname.sendKeys(lastNameValue);
+//        lastname.sendKeys(lastNameValue);
+        elementMethods.fillElement(lastname,lastNameValue);
+        LoggerUtility.info("The user fills First Name with value : "+lastNameValue);
     }
 
     public void fillEmail(String emailValue){
-        email.sendKeys(emailValue);
+//        email.sendKeys(emailValue);
+        elementMethods.fillElement(email,emailValue);
+        LoggerUtility.info("The user fills email with value : "+emailValue);
+
     }
 
     public void fillGender(){
 //        gender.click();
         elementMethods.clickElement(gender);
+        LoggerUtility.info("The user clicks on gender : "+gender);
     }
 
     public void fillMobilePhone(String mobilePhoneValue){
-        mobilephone.sendKeys(mobilePhoneValue);
+//        mobilephone.sendKeys(mobilePhoneValue);
+        elementMethods.fillElement(mobilephone,mobilePhoneValue);
+        LoggerUtility.info("The user fills mobile with value : "+mobilePhoneValue);
     }
 
     public void fillSubjects(String subjectsValue){
 //        subjects.sendKeys(subjectsValue);
 //        subjects.sendKeys(Keys.ENTER);
         elementMethods.fillElement(subjects,subjectsValue,Keys.ENTER);
+        LoggerUtility.info("The user fills subjects with value : "+subjectsValue);
     }
 
 public void fillHobbies(){
-    hobbies.click();
+//    hobbies.click();
+    elementMethods.clickElement(hobbies);
+    LoggerUtility.info("The user clicks on :"+hobbies);
 }
 
 public void uploadPicture(String filepath){
     File file= new File(filepath);
     uploadPicture.sendKeys(file.getAbsolutePath());
+    LoggerUtility.info("The user uploads the file :"+file.getName());
 }
 
 public void fillCurrentAdress(String currentAdressValue){
-    currentAdress.sendKeys(currentAdressValue);
+//    currentAdress.sendKeys(currentAdressValue);
+    elementMethods.fillElement(currentAdress,currentAdressValue);
+    LoggerUtility.info("The user fills address with value : "+currentAdressValue);
 }
 
 public void fillState(String selectstateValue){
         elementMethods.scrollByPixel(0,450);
+    LoggerUtility.info("The user fills scrolls down the page");
         elementMethods.clickJSelement(state);
+    LoggerUtility.info("The user clicks on : "+state);
         elementMethods.fillElement(selectstate,selectstateValue,Keys.ENTER);
+    LoggerUtility.info("The user selects state : "+selectstateValue);
 
 //    selectstate.sendKeys(selectstateValue);
 //    selectstate.sendKeys(Keys.ENTER);
@@ -159,7 +178,9 @@ public void fillState(String selectstateValue){
 
 public void fillCity(String cityvalue){
     elementMethods.clickJSelement(city);
+    LoggerUtility.info("The user clicks on : "+city);
     elementMethods.fillElement(selectCity,cityvalue,Keys.ENTER);
+    LoggerUtility.info("The user selects city : "+cityvalue);
 
 //    city.click();
 //    selectCity.sendKeys(cityvalue);
@@ -168,16 +189,18 @@ public void fillCity(String cityvalue){
 }
 
 public void submitButton(){
-    submit.click();
+//    submit.click();
 //    JavascriptExecutor js = (JavascriptExecutor) driver;
 //    js.executeScript("arguments[0].click();", submit);
-
     elementMethods.clickJSelement(submit);
+    LoggerUtility.info("The user clicks on submit button");
 }
 
-public void clickClose(){
-    closepopup.sendKeys(Keys.ENTER);
-}
+    public void clickClose() {
+        elementMethods.fillElement(closeButton, Keys.ENTER);
+        LoggerUtility.info("The user clicks on close button");
+        //        closeButton.sendKeys(Keys.ENTER);
+    }
 
 public void validatePracticeForm(String mesajasteptat, String prenume, String lastnamevalue, String emailValue, String gendervalue, String mobilephonevalue, String subjectsValue, String hobbiesvalue, String currentadressvalue, String statevalue,String cityvalue, File file){
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd MMMM,yyyy");            // aici facem pattern-ul cerut de tabel : dd MMMM, yy , si am folosit debug ca sa vedem cum ne arata data.

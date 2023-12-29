@@ -31,6 +31,11 @@ public class ElementMethods {
         element.sendKeys(value);
     }
 
+    public void fillElement(WebElement element, Keys keyboardPress){
+        waitVisibleElement(element);
+        element.sendKeys(keyboardPress);
+    }
+
     public void fillElement(WebElement element, String value,Keys keyboardPress){
         waitVisibleElement(element);
         element.sendKeys(value);
@@ -57,6 +62,6 @@ public class ElementMethods {
     public void validateElementMessage(WebElement element,String value){
         waitVisibleElement(element);
         String mesajprimit=element.getText();
-        Assert.assertEquals(value,mesajprimit);
+        Assert.assertEquals(mesajprimit,value);
     }
 }

@@ -1,9 +1,9 @@
 package Pages;
 
+import Logger.LoggerUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends BasePage {
 
@@ -27,22 +27,25 @@ public class HomePage extends BasePage {
     private WebElement elements;
 
     @FindBy (xpath = "//h5[text()='Alerts, Frame & Windows']")
-    private WebElement alertsFrameWindows;         // facem o variabila globala
+    private WebElement alertsFrameWindow;         // facem o variabila globala
 
     @FindBy (xpath = "//h5[text()='Forms']")
     private  WebElement forms;
 
 
-    public void clickAlertFrameWindow(){                 // metodele trebuie sa fie specifice clasei, deci cand le denumim sa fie sugestiv
-        alertsFrameWindows.click();
+    public void clickAlertWindow(){                 // metodele trebuie sa fie specifice clasei, deci cand le denumim sa fie sugestiv
+        alertsFrameWindow.click();
+        LoggerUtility.info("The user clicks on alertsFrameWindows button.");
         // iar apoi in testul nostru , facem un nou obiect  : //AlertFrameWindowPage alertFrameWindowPage = new AlertFrameWindowPage(driver);
                                                               //alertFrameWindowPage.clickAlerts();
     }
     public void clickForms(){
         forms.click();
+        LoggerUtility.info("The user clicks on forms button.");
     }                   // adica de pe pagina de homepage(aceasta) sa faca click pe forms
 
     public void clickElements(){
         elements.click();
+        LoggerUtility.info("The user clicks on elements button.");
     }
 }

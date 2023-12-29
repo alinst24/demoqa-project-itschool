@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class AlertMethods {
-    private WebDriver driver;
+    private WebDriver driver; // scopul clasei e sa ne ofere doar metodele, nu si driverul, de aceea putem face driverul privat
     public AlertMethods(WebDriver driver) {
         this.driver = driver;
     }
@@ -32,8 +32,8 @@ public class AlertMethods {
 
     public void fillAlert(String value){
         waitForAlert();
-        Alert alert4value = driver.switchTo().alert();
-        alert4value.sendKeys(value);
-        alert4value.accept();
+        Alert alertPromt = driver.switchTo().alert();  //facem switchul pe alerta
+        alertPromt.sendKeys(value);
+        alertPromt.accept();
     }
 }

@@ -1,8 +1,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name = "Parallel Testing Suite">
     <test name = "Parallel Tests" thread-count="3" parallel = "classes">
+
         <packages>
             <package name="Tests.*"/>
         </packages>
+        <!-- facem paralelism ( ce clase sa ruleze in paralel), pe cand bucata de cod de sus 4-6 ruleaza tot ce prinde in pachet ; iar dupa ce adaugam logurile si in restul testelor, punem iar bucata de sus :-->
+
+        <!-- <classes>
+            class name="Tests.FrameTest"></class>
+            <class name="Tests.FormsTableTest"></class>
+            <class name="Tests.AlertTest"></class               asa am scris pentru atunci cand vrem sa rulam doar anumite teste
+        </classes> -->
     </test>
 </suite>

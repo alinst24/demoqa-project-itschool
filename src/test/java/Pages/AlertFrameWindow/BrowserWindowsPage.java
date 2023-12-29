@@ -1,5 +1,6 @@
 package Pages.AlertFrameWindow;
 
+import Logger.LoggerUtility;
 import Pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,6 +24,7 @@ public class BrowserWindowsPage extends BasePage {
 
     public void clickNewTabButton() {
         newTabButton.click();        // deschidem un nou tab prin butonul de pe pagina
+        LoggerUtility.info("The user clicks on newTabButton button.");
 //        System.out.println("URL : " + driver.getCurrentUrl());      // asta am facut-o ca sa vedem in consola daca se muta cu focusul sau nu        (Si nu se muta cu focusul pe tab pentru ca nu am dat comanda)
 //
 //        List<String> Tabs = new ArrayList<>(driver.getWindowHandles());        // identificam multimea de taburi deschise  ( taburile sunt considerate stringuri, deci lista de stringuri) ; getWindowHandles() = returneaza cate taburi sunt deschise
@@ -34,13 +36,17 @@ public class BrowserWindowsPage extends BasePage {
 //        driver.switchTo().window(Tabs.get(0));
 
         windowMethods.switchToSpecificWindow(1);
+        LoggerUtility.info("The user switches to a new tab");
         windowMethods.closeCurrentWindow();
+        LoggerUtility.info("The user closes the current tab");
         windowMethods.switchToSpecificWindow(0);
+        LoggerUtility.info("The user switches back to the main tab");
 
     }
 
     public void clickNewWindowButton(){
         newWindowButton.click();
+        LoggerUtility.info("The user clicks on interractWindow button");
 
 //        List<String> Windows = new ArrayList<>(driver.getWindowHandles());
 //        driver.switchTo().window(Windows.get(1));
@@ -50,11 +56,10 @@ public class BrowserWindowsPage extends BasePage {
 //
 //        driver.switchTo().window(Windows.get(0));
         windowMethods.switchToSpecificWindow(1);
+        LoggerUtility.info("The user switches to a new window");
         windowMethods.closeCurrentWindow();
+        LoggerUtility.info("The user closes the current window");
         windowMethods.switchToSpecificWindow(0);
-
+        LoggerUtility.info("The user switches back tot the main window");
     }
-
-
-
 }

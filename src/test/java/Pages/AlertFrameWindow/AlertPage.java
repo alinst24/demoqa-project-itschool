@@ -1,5 +1,6 @@
 package Pages.AlertFrameWindow;
 
+import Logger.LoggerUtility;
 import ObjectData.AlertObject;
 import Pages.BasePage;
 import org.openqa.selenium.Alert;
@@ -15,8 +16,8 @@ import java.time.Duration;
 
 public class AlertPage extends BasePage {
     // Design pattern de programare(adica un sablon care structureaza codul): "Page Object Model"      (acest concept spune ca: daca avem un flow end-to-end,exista posibilitatea ca
-                                                           // unele teste sa treaca prin aceleasi pagini si elemente , si astfel sa reducem codul duplicat, creeand o clasa pentru fiecare pagina )
-                                                           // - daca se modifica ceva in cod, vom modifica doar intr-un singur loc si se propaga peste tot unde este folosit.
+    // unele teste sa treaca prin aceleasi pagini si elemente , si astfel sa reducem codul duplicat, creeand o clasa pentru fiecare pagina )
+    // - daca se modifica ceva in cod, vom modifica doar intr-un singur loc si se propaga peste tot unde este folosit.
 //    public WebDriver driver;
 //
 //    public AlertPage(WebDriver driver) {
@@ -29,24 +30,27 @@ public class AlertPage extends BasePage {
     }
 
     // mereu ar fi bine sa identificam mai intai elementele si apoi sa fac metodele
-    @FindBy (id = "alertButton")
+    @FindBy(id = "alertButton")
     private WebElement button1;
-    @FindBy (id = "timerAlertButton")
+    @FindBy(id = "timerAlertButton")
     private WebElement alertDelayButton;
-    @FindBy(id ="confirmButton" )
+    @FindBy(id = "confirmButton")
     private WebElement alert3;
-    @FindBy(id="promtButton")
-    private WebElement alert4;
+    @FindBy(id = "promtButton")
+    private WebElement promtButton;
 
 
-    public void interractAlertOk(){
+    public void interractAlertOk() {
 //        button1.click();
 //        Alert alertOk= driver.switchTo().alert();            // facem un obiect de tipul alert ca sa ne mutam cu focusul pe alerta
 //        alertOk.accept();                                 // la o alerta putem avea accept(=ok) sau dismiss(=cancel)
         elementMethods.clickElement(button1);
+        LoggerUtility.info("The user clicks on first alert button.");
         alertMethods.acceptAlert();
+        LoggerUtility.info("The user clicks accept on alert.");
     }
-    public void interractAlertDelay(){
+
+    public void interractAlertDelay() {
 //        alertDelayButton.click();
         // ca sa punem un delay ,folosim wait-uri. (spre ex: atunci cand site-ul nu se incarca atat de repede pe cat ne-am dori)
         // Wait-urile sunt de 2 tipuri : implicite si explicite. Wait-ul implicit: prin wait implicit setam un timp maxim de asteptare(afecteaza toate elementele de pe pagina identificate) ; Wait-ul explicit: il folosim tintit(doar unde este nevoie de un timp de asteptare) ; Deci ambele tipuri asteapta un timp maxim(daca conditia se indeplineste mai devreme,face actiunea).
@@ -55,23 +59,36 @@ public class AlertPage extends BasePage {
 
 //        Alert alertdelay= driver.switchTo().alert();
 //        alertdelay.accept();
-elementMethods.clickElement(alertDelayButton);
+        elementMethods.clickElement(alertDelayButton);
+        LoggerUtility.info("The user clicks on alertDelayButton");
         alertMethods.acceptAlert();
+        LoggerUtility.info("The user clicks on acceptAlert");
     }
-    public void interractAlertDismiss(){
+
+    public void interractAlertDismiss() {
 //        alert3.click();
 //        Alert alertcancel=driver.switchTo().alert();
 //        alertcancel.dismiss();
-elementMethods.clickElement(alert3);
+        elementMethods.clickElement(alert3);
+        LoggerUtility.info("The user clicks on third alert button.");
         alertMethods.cancelAlert();
+        LoggerUtility.info("The user clicks on dismiss.");
     }
-//    public void interractAlertValue(String value){            // facem un parametru si dam valoarea in clasa de test
-public void interractAlertValue(AlertObject alertObject){
-//    alert4.click();
-//        Alert alert4value = driver.switchTo().alert();
-//        alert4value.sendKeys(value);
-//        alert4value.accept();
-    elementMethods.clickElement(alert4);
-        alertMethods.fillAlert(alertObject.getInterractAlertValue());
+
+    //    public void interractAlertValue(String value){            // facem un parametru si dam valoarea in clasa de test
+    public void interractAlertValue(AlertObject alertObject) {
+
+        elementMethods.clickElement(promtButton);
+        LoggerUtility.info("The user clicks on promtButton");
+
+        alertMethods.fillAlert(alertObject.getPromptAlertValue());
+        LoggerUtility.info("The user fills the PromptAlertValue" + promtButton);
+
+//        promtButton.click();
+//        alertObject.getPromptAlertValue();
+//        Alert alertPromt = driver.switchTo().alert();  //facem switchul pe alerta
+//        alertPromt.sendKeys(value);
+//        alertPromt.accept();
     }
 }
+

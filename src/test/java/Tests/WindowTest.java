@@ -3,16 +3,15 @@ package Tests;
 import Pages.AlertFrameWindow.AlertFrameWindowPage;
 import Pages.AlertFrameWindow.BrowserWindowsPage;
 import Pages.HomePage;
-import ShareData.ShareData;
 import org.testng.annotations.Test;
 
-public class WindowTest extends ShareData {
+public class WindowTest extends ShareData.Hooks {
 
     @Test
     public void testMetoda() {
 
         HomePage homePage = new HomePage(getDriver());
-        homePage.clickAlertFrameWindow();
+        homePage.clickAlertWindow();
 
         AlertFrameWindowPage alertFrameWindowPage = new AlertFrameWindowPage(getDriver());
         alertFrameWindowPage.clickBrowserWindows();

@@ -1,5 +1,6 @@
 package Pages.Elements;
 
+import Logger.LoggerUtility;
 import ObjectData.WebTableObject;
 import Pages.BasePage;
 import org.openqa.selenium.WebDriver;
@@ -61,9 +62,10 @@ public class WebTablePage extends BasePage {
     private List<WebElement> expectedEntries;
 
 
-    public void clickWebTables(){
-        webtables.click();
-    }
+//    public void clickWebTables(){
+//        webtables.click();
+//    }
+
 //
 //    private Integer actualTableSize;          // am declarat asa ca sa poata fi accesibila in toate metodele din clasa
 //    public void defaultTableSize(){
@@ -143,13 +145,21 @@ public void addnewEntry(WebTableObject webTableObject){
         Integer actualTableSize=actualEntries.size();
 //        addelement.click();
         elementMethods.clickElement(addelement);
+    LoggerUtility.info("The user clicks on the add button");
         elementMethods.fillElement(firstname,webTableObject.getFirstnamevalue());
+    LoggerUtility.info("The user fills firstname field" + firstname);
         elementMethods.fillElement(lastname,webTableObject.getPrenume());
+    LoggerUtility.info("The user fills lastname field" + lastname);
         elementMethods.fillElement(email,webTableObject.getEmailvalue());
+    LoggerUtility.info("The user fills email field" + email);
         elementMethods.fillElement(age,webTableObject.getVarsta());
+    LoggerUtility.info("The user fills age field" + age);
         elementMethods.fillElement(salariu,webTableObject.getSalariuvaloare());
+    LoggerUtility.info("The user fills salary field" + salariu);
         elementMethods.fillElement(departament,webTableObject.getDepartamentvaloare());
+    LoggerUtility.info("The user fills department field" + departament);
         elementMethods.clickElement(submitbutton);
+    LoggerUtility.info("The user clicks on submit button");
 
 //        firstname.sendKeys(firstnamevalue);
 //        lastname.sendKeys(lastnamevalue);
