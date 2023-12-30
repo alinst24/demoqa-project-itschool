@@ -1,0 +1,89 @@
+[2023-12-30T03:09:32,238][INFO ][TestNG-test=Parallel Tests-1] TestNG-test=Parallel Tests-1 : ShareData.ShareData : setup==> The browser was opened with succes.
+[2023-12-30T03:09:32,244][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : ShareData.ShareData : setup==> The browser was opened with succes.
+[2023-12-30T03:09:32,251][INFO ][TestNG-test=Parallel Tests-1] ====================================== Execution started : AlertTest================================================
+[2023-12-30T03:09:32,251][INFO ][TestNG-test=Parallel Tests-2] ====================================== Execution started : FormsTableTest================================================
+[2023-12-30T03:09:32,329][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.HomePage : clickForms==> The user clicks on forms button.
+[2023-12-30T03:09:32,337][INFO ][TestNG-test=Parallel Tests-1] TestNG-test=Parallel Tests-1 : Pages.HomePage : clickAlertWindow==> The user clicks on alertsFrameWindows button.
+[2023-12-30T03:09:32,373][INFO ][TestNG-test=Parallel Tests-1] TestNG-test=Parallel Tests-1 : Pages.AlertFrameWindow.AlertFrameWindowPage : clickAlerts==> The user clicks on Alerts button.
+[2023-12-30T03:09:32,395][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.FormsPage : clickPracticeForms==> The user clicks on practiceForm button.
+[2023-12-30T03:09:32,460][INFO ][TestNG-test=Parallel Tests-1] TestNG-test=Parallel Tests-1 : Pages.AlertFrameWindow.AlertPage : interractAlertOk==> The user clicks on first alert button.
+[2023-12-30T03:09:32,468][INFO ][TestNG-test=Parallel Tests-1] TestNG-test=Parallel Tests-1 : Pages.AlertFrameWindow.AlertPage : interractAlertOk==> The user clicks accept on alert.
+[2023-12-30T03:09:32,492][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : fillFirstName==> The user fills First Name with value : Stanciu
+[2023-12-30T03:09:32,518][INFO ][TestNG-test=Parallel Tests-1] TestNG-test=Parallel Tests-1 : Pages.AlertFrameWindow.AlertPage : interractAlertDelay==> The user clicks on alertDelayButton
+[2023-12-30T03:09:32,549][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : fillLastName==> The user fills First Name with value : Alin-Georgian
+[2023-12-30T03:09:32,606][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : fillEmail==> The user fills email with value : alinstanciu707@yahoo.com
+[2023-12-30T03:09:32,651][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : fillGender==> The user clicks on gender : [[ChromeDriver: chrome on windows (bf1420052d84523260eb6983b346a587)] -> css selector: label[for='gender-radio-1']]
+[2023-12-30T03:09:32,696][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : fillMobilePhone==> The user fills mobile with value : 0771702457
+[2023-12-30T03:09:32,807][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : fillSubjects==> The user fills subjects with value : English
+[2023-12-30T03:09:32,863][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : fillHobbies==> The user clicks on :[[ChromeDriver: chrome on windows (bf1420052d84523260eb6983b346a587)] -> css selector: label[for='hobbies-checkbox-1']]
+[2023-12-30T03:09:32,884][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : uploadPicture==> The user uploads the file :drive.txt
+[2023-12-30T03:09:32,925][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : fillCurrentAdress==> The user fills address with value : Braila
+[2023-12-30T03:09:32,930][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : fillState==> The user fills scrolls down the page
+[2023-12-30T03:09:32,959][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : fillState==> The user clicks on : [[ChromeDriver: chrome on windows (bf1420052d84523260eb6983b346a587)] -> id: state]
+[2023-12-30T03:09:33,029][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : fillState==> The user selects state : NCR
+[2023-12-30T03:09:33,056][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : fillCity==> The user clicks on : [[ChromeDriver: chrome on windows (bf1420052d84523260eb6983b346a587)] -> id: city]
+[2023-12-30T03:09:33,126][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : fillCity==> The user selects city : Delhi
+[2023-12-30T03:09:33,164][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : submitButton==> The user clicks on submit button
+[2023-12-30T03:09:33,200][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating display message.
+[2023-12-30T03:09:33,217][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating default text on first field.
+[2023-12-30T03:09:33,267][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating data in the first field.
+[2023-12-30T03:09:33,277][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating default text on second field.
+[2023-12-30T03:09:33,287][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating data in the second field.
+[2023-12-30T03:09:33,295][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating default text on third field.
+[2023-12-30T03:09:33,303][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating data in the third field.
+[2023-12-30T03:09:33,312][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating default text on fourth field.
+[2023-12-30T03:09:33,344][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating data in the fourth field.
+[2023-12-30T03:09:33,354][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating default text on fifth field.
+[2023-12-30T03:09:33,367][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating data in the fifth field.
+[2023-12-30T03:09:33,376][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating default text on sixth field.
+[2023-12-30T03:09:33,385][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating data in the sixth field.
+[2023-12-30T03:09:33,394][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating default text on seventh field.
+[2023-12-30T03:09:33,402][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating data in the seventh field.
+[2023-12-30T03:09:33,411][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating default eighth on first field.
+[2023-12-30T03:09:33,422][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating data in the eighth field.
+[2023-12-30T03:09:33,431][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating default text on ninth field.
+[2023-12-30T03:09:33,440][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating data in the ninth field.
+[2023-12-30T03:09:33,448][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating default text on tenth field.
+[2023-12-30T03:09:33,457][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : validatePracticeForm==> Validating data in the tenth field.
+[2023-12-30T03:09:33,494][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Forms.PracticeFormPage : clickClose==> The user clicks on close button
+[2023-12-30T03:09:33,590][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : ShareData.ShareData : clear==> The browser was closed with success.
+[2023-12-30T03:09:33,590][INFO ][TestNG-test=Parallel Tests-2] ====================================== Execution finished : FormsTableTest================================================
+[2023-12-30T03:09:35,150][INFO ][TestNG-test=Parallel Tests-3] TestNG-test=Parallel Tests-3 : ShareData.ShareData : setup==> The browser was opened with succes.
+[2023-12-30T03:09:35,154][INFO ][TestNG-test=Parallel Tests-3] ====================================== Execution started : FrameTest================================================
+[2023-12-30T03:09:35,212][INFO ][TestNG-test=Parallel Tests-3] TestNG-test=Parallel Tests-3 : Pages.HomePage : clickAlertWindow==> The user clicks on alertsFrameWindows button.
+[2023-12-30T03:09:35,252][INFO ][TestNG-test=Parallel Tests-3] TestNG-test=Parallel Tests-3 : Pages.AlertFrameWindow.AlertFrameWindowPage : clickFrames==> The user clicks on frames button.
+[2023-12-30T03:09:39,189][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : ShareData.ShareData : setup==> The browser was opened with succes.
+[2023-12-30T03:09:39,192][INFO ][TestNG-test=Parallel Tests-2] ====================================== Execution started : WebtableTest================================================
+[2023-12-30T03:09:39,250][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.HomePage : clickElements==> The user clicks on elements button.
+[2023-12-30T03:09:39,291][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Elements.ElementsPage : clickWebTables==> The user clicks on webtables element
+[2023-12-30T03:09:39,356][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Elements.WebTablePage : addnewEntry==> The user clicks on the add button
+[2023-12-30T03:09:39,413][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Elements.WebTablePage : addnewEntry==> The user fills firstname field[[ChromeDriver: chrome on windows (1c4268cac693ae1f5c0db3198a7395a6)] -> id: firstName]
+[2023-12-30T03:09:39,463][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Elements.WebTablePage : addnewEntry==> The user fills lastname field[[ChromeDriver: chrome on windows (1c4268cac693ae1f5c0db3198a7395a6)] -> id: lastName]
+[2023-12-30T03:09:39,520][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Elements.WebTablePage : addnewEntry==> The user fills email field[[ChromeDriver: chrome on windows (1c4268cac693ae1f5c0db3198a7395a6)] -> id: userEmail]
+[2023-12-30T03:09:39,582][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Elements.WebTablePage : addnewEntry==> The user fills age field[[ChromeDriver: chrome on windows (1c4268cac693ae1f5c0db3198a7395a6)] -> id: age]
+[2023-12-30T03:09:39,624][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Elements.WebTablePage : addnewEntry==> The user fills salary field[[ChromeDriver: chrome on windows (1c4268cac693ae1f5c0db3198a7395a6)] -> id: salary]
+[2023-12-30T03:09:39,675][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Elements.WebTablePage : addnewEntry==> The user fills department field[[ChromeDriver: chrome on windows (1c4268cac693ae1f5c0db3198a7395a6)] -> id: department]
+[2023-12-30T03:09:39,721][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.Elements.WebTablePage : addnewEntry==> The user clicks on submit button
+[2023-12-30T03:09:39,847][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : ShareData.ShareData : clear==> The browser was closed with success.
+[2023-12-30T03:09:39,848][INFO ][TestNG-test=Parallel Tests-2] ====================================== Execution finished : WebtableTest================================================
+[2023-12-30T03:09:45,329][INFO ][TestNG-test=Parallel Tests-3] TestNG-test=Parallel Tests-3 : Pages.AlertFrameWindow.FramesPage : interractFrame1==> The user clicks on specific frame.
+[2023-12-30T03:09:45,342][INFO ][TestNG-test=Parallel Tests-3] TestNG-test=Parallel Tests-3 : Pages.AlertFrameWindow.FramesPage : interractFrame1==> The user prints the frameText value
+[2023-12-30T03:09:45,344][INFO ][TestNG-test=Parallel Tests-3] TestNG-test=Parallel Tests-3 : Pages.AlertFrameWindow.FramesPage : interractFrame1==> The user switches back to primary frame.
+[2023-12-30T03:09:45,389][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : ShareData.ShareData : setup==> The browser was opened with succes.
+[2023-12-30T03:09:45,393][INFO ][TestNG-test=Parallel Tests-2] ====================================== Execution started : WindowTest================================================
+[2023-12-30T03:09:45,449][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.HomePage : clickAlertWindow==> The user clicks on alertsFrameWindows button.
+[2023-12-30T03:09:45,477][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.AlertFrameWindow.AlertFrameWindowPage : clickBrowserWindows==> The user clicks on browserWindows button.
+[2023-12-30T03:09:45,514][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.AlertFrameWindow.BrowserWindowsPage : clickNewTabButton==> The user clicks on newTabButton button.
+[2023-12-30T03:09:45,576][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.AlertFrameWindow.BrowserWindowsPage : clickNewTabButton==> The user switches to a new tab
+[2023-12-30T03:09:45,641][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.AlertFrameWindow.BrowserWindowsPage : clickNewTabButton==> The user closes the current tab
+[2023-12-30T03:09:45,645][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.AlertFrameWindow.BrowserWindowsPage : clickNewTabButton==> The user switches back to the main tab
+[2023-12-30T03:09:45,694][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.AlertFrameWindow.BrowserWindowsPage : clickNewWindowButton==> The user clicks on interractWindow button
+[2023-12-30T03:09:45,755][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.AlertFrameWindow.BrowserWindowsPage : clickNewWindowButton==> The user switches to a new window
+[2023-12-30T03:09:45,767][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.AlertFrameWindow.BrowserWindowsPage : clickNewWindowButton==> The user closes the current window
+[2023-12-30T03:09:45,772][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : Pages.AlertFrameWindow.BrowserWindowsPage : clickNewWindowButton==> The user switches back tot the main window
+[2023-12-30T03:09:45,860][INFO ][TestNG-test=Parallel Tests-2] TestNG-test=Parallel Tests-2 : ShareData.ShareData : clear==> The browser was closed with success.
+[2023-12-30T03:09:45,861][INFO ][TestNG-test=Parallel Tests-2] ====================================== Execution finished : WindowTest================================================
+[2023-12-30T03:09:55,410][INFO ][TestNG-test=Parallel Tests-3] TestNG-test=Parallel Tests-3 : Pages.AlertFrameWindow.FramesPage : interractFrame2==> The user switches on the second frame.
+[2023-12-30T03:09:55,418][INFO ][TestNG-test=Parallel Tests-3] TestNG-test=Parallel Tests-3 : Pages.AlertFrameWindow.FramesPage : interractFrame2==> The user prints the frameText value
+[2023-12-30T03:09:55,505][INFO ][TestNG-test=Parallel Tests-3] TestNG-test=Parallel Tests-3 : ShareData.ShareData : clear==> The browser was closed with success.
+[2023-12-30T03:09:55,506][INFO ][TestNG-test=Parallel Tests-3] ====================================== Execution finished : FrameTest================================================

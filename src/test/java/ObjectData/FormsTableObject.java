@@ -1,5 +1,6 @@
 package ObjectData;
 
+import java.io.File;
 import java.util.HashMap;
 
 public class FormsTableObject {
@@ -9,6 +10,7 @@ public class FormsTableObject {
     private String lastnamevalue;
 
     private String emailValue;
+    private String gender;
 
     private String mobilephonevalue;
 
@@ -22,7 +24,10 @@ public class FormsTableObject {
 
     private String mesajasteptat;
 
-    private String examen;        // apoi facem getter si setter (jos)
+    private String hobbies;      // apoi facem getter si setter (jos)
+
+    private File file;
+
 
 
 
@@ -66,8 +71,15 @@ public class FormsTableObject {
                 case "mesajasteptat":
                     setMesajasteptat(testData.get(Key));
                     break;
-                case "examen":
-                    setExamen(testData.get(Key));
+                case "gender":
+                    setGender(testData.get(Key));
+                    break;
+                case "hobbies":
+                    setHobbies(testData.get(Key));
+                    break;
+                case "file":
+                    File file = new File(testData.get(Key));
+                    setFile(file);
                     break;
             }
         }
@@ -146,12 +158,27 @@ public class FormsTableObject {
         this.mesajasteptat = mesajasteptat;
     }
 
-    public String getExamen() {
-        return examen;
+    public String getGender() {
+        return gender;
     }
 
-    public void setExamen(String examen) {
-        this.examen = examen;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
-    // Si apoi adaugam inca un case , sus
+
+    public String getHobbies() {
+        return hobbies;
+    }
+
+    public void setHobbies(String hobbies) {
+        this.hobbies = hobbies;
+    }
+
+    public File getFile() {
+        return file;
+    }
+
+    public void setFile(File file) {
+        this.file = file;
+    }
 }

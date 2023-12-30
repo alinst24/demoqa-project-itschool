@@ -4,11 +4,8 @@ import ObjectData.FormsTableObject;
 import Pages.Forms.FormsPage;
 import Pages.HomePage;
 import Pages.Forms.PracticeFormPage;
-import ShareData.ShareData;
 import org.testng.annotations.Test;
 import ShareData.Hooks;
-import java.io.File;
-import java.util.List;
 
 public class FormsTableTest extends Hooks {
 
@@ -38,8 +35,9 @@ public class FormsTableTest extends Hooks {
 //        practiceFormPage.fillPracticeForm(firstNameValue, lastnamevalue, emailValue, mobilephonevalue, subjectsValue, currentadressvalue,stateandcityvalue, cityvalue);      // fiindca am apelat fillpracticeform, ne-a facut upload si la fisier, deci aici nu trebuie sa am File ca parametru
         practiceFormPage.fillPracticeForm(formsTableObject);
 
-        List<String> formValues = practiceFormPage.getValuesForm();
+//        List<String> formValues = practiceFormPage.getValuesForm();
         practiceFormPage.submitButton();
+        practiceFormPage.validatePracticeForm(formsTableObject);
 
 //        practiceFormPage.validatePracticeForm(mesajasteptat, firstNameValue, lastnamevalue, emailValue, formValues.get(0), mobilephonevalue, subjectsValue, formValues.get(1), currentadressvalue, stateandcityvalue,cityvalue,new File(filepath));   //in schimb aici la validare, initiem cu "new" File (si path-ul)
         practiceFormPage.clickClose();
