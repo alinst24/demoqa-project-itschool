@@ -62,7 +62,7 @@ public class LoggerUtility {
 
     // metoda care pune tot continutul fisierelor intr-unul singur
 
-    public static void mergeLogsIntoOne() {
+    public static void mergeLogsIntoOne(){
         File dir = new File(suiteLogsPath);
 
         // Get list of all the files in form of String Array
@@ -75,9 +75,7 @@ public class LoggerUtility {
             // loop for reading the contents of all the files
             // in the directory GeeksForGeeks
             for (String fileName : fileNames) {
-                if (fileName.contains(".log")) {
-
-                    System.out.println("Reading from " + fileName);
+                if(fileName.contains(".log")) {
 
                     // create instance of file from Name of
                     // the file stored in string Array
@@ -98,8 +96,12 @@ public class LoggerUtility {
                     pw.flush();
                 }
             }
-        } catch (Exception exception) {
+        }
+        catch (Exception exception){
             System.out.println(exception.getMessage());
         }
+
     }
+
+
 }

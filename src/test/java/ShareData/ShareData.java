@@ -1,6 +1,7 @@
 package ShareData;
 
 import Logger.LoggerUtility;
+import ShareData.Browser.BrowserFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,12 +17,14 @@ public class ShareData {               // aceasta clasa o folosim ca sa ruleze a
 
 //    @BeforeMethod                      // preconditie:                // deci mai intai se executa beforemethod (inainte de metoda de test din alta clasa), apoi testul , apoi aftermethod
     public void setup(){
-        driver = new ChromeDriver();
-        driver.get("https://demoqa.com/");
-        driver.manage().window().maximize();
+//        driver = new ChromeDriver();
+//        driver.get("https://demoqa.com/");
+//        driver.manage().window().maximize();
+//
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));        // asta e un wait implicit , care de obicei se pune la inceputul codului , de obicei 10 secunde
+//        LoggerUtility.info("The browser was opened with succes.");
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));        // asta e un wait implicit , care de obicei se pune la inceputul codului , de obicei 10 secunde
-        LoggerUtility.info("The browser was opened with succes.");
+        driver=new BrowserFactory().getBrowserDriver();
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,450)", "");
