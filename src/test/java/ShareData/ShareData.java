@@ -17,6 +17,7 @@ public class ShareData {               // aceasta clasa o folosim ca sa ruleze a
 
 //    @BeforeMethod                      // preconditie:                // deci mai intai se executa beforemethod (inainte de metoda de test din alta clasa), apoi testul , apoi aftermethod
     public void setup(){
+        // liniile de mai jos le-am facut sa functioneze pentru orice browser  (linia 28)
 //        driver = new ChromeDriver();
 //        driver.get("https://demoqa.com/");
 //        driver.manage().window().maximize();

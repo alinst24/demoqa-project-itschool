@@ -5,12 +5,13 @@ import org.openqa.selenium.WebDriver;
 import java.util.HashMap;
 
 public class BrowserFactory {
+    // Clasa prin care specificam ce browser vrem sa foloseasca testele
 
     // Facem o metoda care sa citeasca valorile unor variabile de sistem din pom.xml
     // Pe baza acestor valori vom lua o decizie in functie de environmentul pe care se ruleaza testele automate
 
     public WebDriver getBrowserDriver(){
-        Boolean cicd = Boolean.parseBoolean(System.getProperty("cicd"));
+        Boolean cicd = Boolean.parseBoolean(System.getProperty("cicd")); //aceasta metoda ia un string si il parseaza ca un boolean
         String browser = null;
 
         //Trebuie sa decidem care este tipul de browser in momentul cand rulam pe local si remote
@@ -36,6 +37,6 @@ public class BrowserFactory {
                 edgeBrowserService.openBrowser(cicd);
                 return  edgeBrowserService.getDriver();
         }
-        return null;
+        return null;       // in caz in care ca nu a intalnit nici un caz( adica nici un browser)
     }
 }

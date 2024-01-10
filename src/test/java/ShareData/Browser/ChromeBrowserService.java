@@ -21,7 +21,6 @@ public class ChromeBrowserService extends BaseBrowserService implements BrowserS
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         LoggerUtility.info("The browser was opened with succes.");
-
     }
 
     @Override
