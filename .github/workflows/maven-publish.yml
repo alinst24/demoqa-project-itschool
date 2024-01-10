@@ -27,4 +27,3 @@ jobs:
 
     - name: Build project and run tests
       run: mvn clean install -Dcicd=true -Dbrowser=edge
-
