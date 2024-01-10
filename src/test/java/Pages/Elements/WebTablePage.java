@@ -144,7 +144,7 @@ public class WebTablePage extends BasePage {
 public void addnewEntry(WebTableObject webTableObject){
         Integer actualTableSize=actualEntries.size();
 //        addelement.click();
-        elementMethods.clickElement(addelement);
+        elementMethods.clickJSelement(addelement);
     LoggerUtility.info("The user clicks on the add button");
         elementMethods.fillElement(firstname,webTableObject.getFirstnamevalue());
     LoggerUtility.info("The user fills firstname field" + firstname);
