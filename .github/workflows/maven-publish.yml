@@ -3,10 +3,15 @@
 
 name: Maven Package
 
-on: 
-  push:
-    branches:
-      - master
+on:
+  workflow_dispatch:
+    inputs:
+      browser:
+        description: 'Choose browser from the following: chrome, edge, firefox'
+        required: true
+        default: 'chrome'
+
+
 
 jobs:
   build:
@@ -26,7 +31,7 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Build project and run tests
-      run: mvn clean install -Dcicd=true -Dbrowser=edge
+      run: mvn clean install -Dcicd=true -Dbrowser=${{ github.event.inputs.browser }}
 
     - name: Publish regression logs
       if: always()
