@@ -10,6 +10,10 @@ on:
         description: 'Choose browser from the following: chrome, edge, firefox'
         required: true
         default: 'chrome'
+      suite:
+        description: 'Choose suite from the following: RegressionSuite, SanitySuite, SmokeSuite'
+        required: true
+        default: 'SmokeSuite'
 
 
 
@@ -31,7 +35,7 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Build project and run tests
-      run: mvn clean install -Dcicd=true -Dbrowser=${{ github.event.inputs.browser }}
+      run: mvn clean install -Dcicd=true -Dbrowser=${{ github.event.inputs.browser }} -DsuiteXmlFile=${{ github.event.inputs.suite }} -PCustomSuite
 
     - name: Publish regression logs
       if: always()
