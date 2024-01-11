@@ -35,7 +35,7 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Build project and run tests
-      run: mvn clean install -Dcicd=true -Dbrowser=${{ github.event.inputs.browser }} -DsuiteXmlFile=${{ github.event.inputs.suite }} -PCustomSuite
+      run: mvn clean install -Dcicd=true -Dbrowser=${{ github.event.inputs.browser }} -DsuiteXmlFile=Suites/${{ github.event.inputs.suite }} -PCustomSuite
 
     - name: Publish regression logs
       if: always()
