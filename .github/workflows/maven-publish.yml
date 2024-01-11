@@ -27,3 +27,10 @@ jobs:
 
     - name: Build project and run tests
       run: mvn clean install -Dcicd=true -Dbrowser=edge
+
+    - name: Publish regression logs
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: RegressionLogs
+        path: target/logs/output.log
