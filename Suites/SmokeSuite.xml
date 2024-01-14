@@ -1,13 +1,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name = "Smoke Testing Suite">
     <test name = "Smoke Tests" thread-count="3" parallel = "classes">
-
-        <packages>
-            <package name="Tests.*"/>
-        </packages>
-        <!--classes>
+        <classes>
+            <class name="Tests.AlertTest"/>
             <class name="Tests.FormsTableTest"/>
-        </classes-->
-
+            <class name="Tests.FrameTest"/>
+            <class name="Tests.WebtableTest"/>
+        </classes>
     </test>
 </suite>
