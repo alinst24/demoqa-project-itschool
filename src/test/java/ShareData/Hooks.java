@@ -23,7 +23,7 @@ public class Hooks extends ShareData{      // va avea ca rol sa aduca impreuna t
         PropertyUtility propertyUtility = new PropertyUtility(testName);
         testData = propertyUtility.getAllData();                                    // logica care ar trebui sa ne scoata dinamic datele
         LoggerUtility.startTestCase(testName);                        //in mod normal faceam obiect ,dar am facut static si avem metodele
-                                                                       // deci apelam metoda STATICA pentru log-uri , nu avem nevoie de obiect
+        // deci apelam metoda STATICA pentru log-uri , nu avem nevoie de obiect
         setup();                   //apare metoda de setup fiindca avem extends ShareData
     }
 
