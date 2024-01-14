@@ -6,7 +6,6 @@ import Pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import java.util.List;
@@ -26,9 +25,9 @@ public class WebTablePage extends BasePage {
 //        scroll.moveToElement(elements).perform();
 //       SAU ALTA METODA DE SCROLL :
 
-//    JavascriptExecutor js = (JavascriptExecutor) driver;
+    //    JavascriptExecutor js = (JavascriptExecutor) driver;
 //        js.executeScript("window.scrollBy(0,450)", "");                            // Este deja introdus in sharedata
-@FindBy(xpath = "//span[text()='Web Tables']")
+    @FindBy(xpath = "//span[text()='Web Tables']")
     private WebElement webtables;
 
     @FindBy(id = "addNewRecordButton")
@@ -67,15 +66,14 @@ public class WebTablePage extends BasePage {
 //    }
 
 //
-//    private Integer actualTableSize;          // am declarat asa ca sa poata fi accesibila in toate metodele din clasa
+//    private Integer actualTableSize;           am declarat asa ca sa poata fi accesibila in toate metodele din clasa
 //    public void defaultTableSize(){
-//        actualTableSize=actualEntries.size();    //  deci practic aici va avea valoarea 3 - pentru ca sunt deja 3 randuri cu valori  in tabel ( si doar cele completate au even si odd, restul au si altceva) ; // ne ia dimensiunea listei actuale
+//        actualTableSize=actualEntries.size();      deci practic aici va avea valoarea 3 - pentru ca sunt deja 3 randuri cu valori  in tabel ( si doar cele completate au even si odd, restul au si altceva) ;  ne ia dimensiunea listei actuale
 //    }
-//
+
 //    public void clickAdd(){
 //        addelement.click();
 //    }
-//
 //    public void fillForm(String firstname,String lastnamevalue,String emailvalue,String agevalue, String salariuvalue,String departmentvalue){
 //        fillFirstName(firstname);
 //        fillLastName(lastnamevalue);
@@ -84,19 +82,19 @@ public class WebTablePage extends BasePage {
 //        fillSalary(salariuvalue);
 //        fillDepartment(departmentvalue);
 //    }
-//
+
 //    public void fillFirstName(String firstnamevalue){
 //        firstname.sendKeys(firstnamevalue);
 //    }
-//
+
 //    public void fillLastName(String lastnamevalue){
 //        lastname.sendKeys(lastnamevalue);
 //    }
-//
+
 //    public void fillEmail(String emailvalue){
 //        email.sendKeys(emailvalue);
 //    }
-//
+
 //    public void fillAge(String agevalue){
 //        age.sendKeys(agevalue);
 //    }
@@ -129,54 +127,40 @@ public class WebTablePage extends BasePage {
 //        Assert.assertTrue(lastEntryTable.contains(salariuvaloare));
 //        Assert.assertTrue(lastEntryTable.contains(departamentvaloare));
 //    }
-//
-//
-//
 
+    //    public void addnewEntry(String firstnamevalue,String lastnamevalue,String emailvalue,String agevalue,String salaryvalue,String departmentvalue){
 
+    public void addnewEntry(WebTableObject webTableObject) {
+        Integer actualTableSize = actualEntries.size();
 
-
-
-
-
-
-//    public void addnewEntry(String firstnamevalue,String lastnamevalue,String emailvalue,String agevalue,String salaryvalue,String departmentvalue){
-public void addnewEntry(WebTableObject webTableObject){
-        Integer actualTableSize=actualEntries.size();
 //        addelement.click();
-        elementMethods.clickJSelement(addelement);
-    LoggerUtility.info("The user clicks on the add button");
-        elementMethods.fillElement(firstname,webTableObject.getFirstnamevalue());
-    LoggerUtility.info("The user fills firstname field" + firstname);
-        elementMethods.fillElement(lastname,webTableObject.getPrenume());
-    LoggerUtility.info("The user fills lastname field" + lastname);
-        elementMethods.fillElement(email,webTableObject.getEmailvalue());
-    LoggerUtility.info("The user fills email field" + email);
-        elementMethods.fillElement(age,webTableObject.getVarsta());
-    LoggerUtility.info("The user fills age field" + age);
-        elementMethods.fillElement(salariu,webTableObject.getSalariuvaloare());
-    LoggerUtility.info("The user fills salary field" + salariu);
-        elementMethods.fillElement(departament,webTableObject.getDepartamentvaloare());
-    LoggerUtility.info("The user fills department field" + departament);
-        elementMethods.clickElement(submitbutton);
-    LoggerUtility.info("The user clicks on submit button");
 
-//        firstname.sendKeys(firstnamevalue);
-//        lastname.sendKeys(lastnamevalue);
-//        email.sendKeys(emailvalue);
-//        age.sendKeys(agevalue);
-//        salariu.sendKeys(salaryvalue);
-//        departament.sendKeys(departmentvalue);
-//        submitbutton.click();
-        validateNewEntry(actualTableSize,webTableObject);
+        elementMethods.clickJSelement(addelement);
+        LoggerUtility.info("The user clicks on the add button");
+        elementMethods.fillElement(firstname, webTableObject.getFirstnamevalue());
+        LoggerUtility.info("The user fills firstname field" + firstname);
+        elementMethods.fillElement(lastname, webTableObject.getPrenume());
+        LoggerUtility.info("The user fills lastname field" + lastname);
+        elementMethods.fillElement(email, webTableObject.getEmailvalue());
+        LoggerUtility.info("The user fills email field" + email);
+        elementMethods.fillElement(age, webTableObject.getVarsta());
+        LoggerUtility.info("The user fills age field" + age);
+        elementMethods.fillElement(salariu, webTableObject.getSalariuvaloare());
+        LoggerUtility.info("The user fills salary field" + salariu);
+        elementMethods.fillElement(departament, webTableObject.getDepartamentvaloare());
+        LoggerUtility.info("The user fills department field" + departament);
+        elementMethods.clickElement(submitbutton);
+        LoggerUtility.info("The user clicks on submit button");
+
+        validateNewEntry(actualTableSize, webTableObject);
     }
 
-//    private void validateNewEntry(Integer actualTableSize,String firstnamevalue,String lastnamevalue,String emailvalue,String agevalue,String salaryvalue,String departmentvalue){
-private void validateNewEntry(Integer actualTableSize, WebTableObject webTableObject){
+    //    private void validateNewEntry(Integer actualTableSize,String firstnamevalue,String lastnamevalue,String emailvalue,String agevalue,String salaryvalue,String departmentvalue){
+    private void validateNewEntry(Integer actualTableSize, WebTableObject webTableObject) {
 
-    Integer expectedTableSize=actualEntries.size();
-        Assert.assertTrue(actualTableSize+1==expectedTableSize);
-        String lastentryTable=actualEntries.get(actualTableSize).getText();
+        Integer expectedTableSize = actualEntries.size();
+        Assert.assertTrue(actualTableSize + 1 == expectedTableSize);
+        String lastentryTable = actualEntries.get(actualTableSize).getText();
         Assert.assertTrue(lastentryTable.contains(webTableObject.getFirstnamevalue()));
         Assert.assertTrue(lastentryTable.contains(webTableObject.getPrenume()));
         Assert.assertTrue(lastentryTable.contains(webTableObject.getEmailvalue()));
