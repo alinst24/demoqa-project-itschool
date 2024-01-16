@@ -36,7 +36,7 @@ public class FirefoxBrowserService extends BaseBrowserService implements Browser
         HashMap<String, String> testData = getBrowserOptions();
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         if(cicd){
-            firefoxOptions.addArguments(testData.get("headless"));
+            firefoxOptions.addArguments("--headless");
         }
         if(!testData.get("headless").isEmpty()){
             firefoxOptions.addArguments(testData.get("headless"));
