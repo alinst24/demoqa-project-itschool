@@ -35,7 +35,7 @@ public class ChromeBrowserService extends BaseBrowserService implements BrowserS
         HashMap<String,String> testData = getBrowserOptions();
         ChromeOptions chromeOptions = new ChromeOptions();      //acesta este un obiect specific de chrome care ne da posibilitatea sa-i specificam la instanta de driver ca vrem sa avem un browser cu anumite proprietati(cele din fisierul .properties)
         if (cicd){
-            chromeOptions.addArguments("--headless");
+            chromeOptions.addArguments(testData.get("headless"));
         }
         if (!testData.get("headless").isEmpty()){
             chromeOptions.addArguments(testData.get("headless"));

@@ -40,7 +40,7 @@ public class EdgeBrowserService extends BaseBrowserService implements BrowserSer
         HashMap<String,String> testData = getBrowserOptions();
         EdgeOptions edgeOptions = new EdgeOptions();
         if (cicd){
-            edgeOptions.addArguments("--headless");
+            edgeOptions.addArguments(testData.get("headless"));
         }
         if (!testData.get("headless").isEmpty()){
             edgeOptions.addArguments(testData.get("headless"));
