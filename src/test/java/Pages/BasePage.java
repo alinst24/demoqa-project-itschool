@@ -9,15 +9,15 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
 
-    public WebDriver driver;
+    protected WebDriver driver;                  //DACA acestea ar fi publice , din exterior se pot accesa si se pot strica
 
-    public WindowMethods windowMethods;
+    protected WindowMethods windowMethods;
 
-    public AlertMethods alertMethods;                          // facem un nou obiect si mai jos il initializam
+    protected AlertMethods alertMethods;                          // facem un nou obiect si mai jos il initializam
 
-    public FrameMethods frameMethods;
+    protected FrameMethods frameMethods;
 
-    public ElementMethods elementMethods;
+    protected ElementMethods elementMethods;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ElementsPage extends BasePage {
-    public ElementsPage(WebDriver driver) {
+    public ElementsPage(WebDriver driver) {     // aceasta clasa mosteneste un parinte(BasePage)(care avea driver public)
         super(driver);
     }
 
