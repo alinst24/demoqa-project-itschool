@@ -3,9 +3,10 @@ package Tests;
 import Pages.AlertFrameWindow.AlertFrameWindowPage;
 import Pages.AlertFrameWindow.BrowserWindowsPage;
 import Pages.HomePage;
+import ShareData.Hooks;
 import org.testng.annotations.Test;
 
-public class WindowTest extends ShareData.Hooks {
+public class WindowTest extends Hooks {
 
     @Test
     public void testMetoda() {

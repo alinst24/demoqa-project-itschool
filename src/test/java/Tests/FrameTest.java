@@ -6,7 +6,7 @@ import Pages.HomePage;
 import org.testng.annotations.Test;
 import ShareData.Hooks;
 
-public class FrameTest extends ShareData.Hooks {
+public class FrameTest extends Hooks {
 
     @Test
     public void testMetoda() {
