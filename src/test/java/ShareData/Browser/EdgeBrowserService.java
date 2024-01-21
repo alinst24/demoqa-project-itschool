@@ -20,9 +20,10 @@ public class EdgeBrowserService extends BaseBrowserService implements BrowserSer
         driver = new EdgeDriver(edgeOptions);
         driver.get(getBrowserOptions().get("url"));
 //        driver.manage().window().maximize();
-
+        String url = getBrowserOptions().get("url");
+        driver.get(url);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        LoggerUtility.info("The browser was opened with succes.");
+        LoggerUtility.info("The browser was opened with succes and the url: "+url+" was opened.");
 
     }
 

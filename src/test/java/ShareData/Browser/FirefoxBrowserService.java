@@ -17,9 +17,10 @@ public class FirefoxBrowserService extends BaseBrowserService implements Browser
         driver = new FirefoxDriver(firefoxOptions);
         driver.get(getBrowserOptions().get("url"));
 //        driver.manage().window().maximize();
-
+        String url = getBrowserOptions().get("url");
+        driver.get(url);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        LoggerUtility.info("The browser was opened with success");
+        LoggerUtility.info("The browser was opened with succes and the url: "+url+" was opened.");
 
     }
 

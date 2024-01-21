@@ -266,6 +266,9 @@ public class PracticeFormPage extends BasePage {
     }
 }
 
+// Ca sa gasim anumite webelemente(NUMARUL LOR) dintr-o lista de webelemente trebuie sa specificam clasa webelementelor dupa clasa listei . EX: ".product-grid .item-box"
+
+
 //    Assert.assertTrue(validationTable.get(0).getText().contains("Student Name"));
 //    Assert.assertTrue(validationTable.get(0).getText().contains(prenume+ " "+lastnamevalue));
 

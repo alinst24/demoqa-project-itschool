@@ -18,9 +18,10 @@ public class ChromeBrowserService extends BaseBrowserService implements BrowserS
         driver = new ChromeDriver(chromeOptions);
         driver.get(getBrowserOptions().get("url"));
 //        driver.manage().window().maximize();
-
+        String url = getBrowserOptions().get("url");
+        driver.get(url);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        LoggerUtility.info("The browser was opened with succes.");
+        LoggerUtility.info("The browser was opened with succes and the url: "+url+" was opened.");
     }
 
     @Override
