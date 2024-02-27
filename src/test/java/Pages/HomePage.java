@@ -31,6 +31,13 @@ public class HomePage extends BasePage {
 
     @FindBy (xpath = "//h5[text()='Forms']")
     private  WebElement forms;
+    @FindBy(xpath = "//p[text()='Consent']")
+    private WebElement consent;
+
+    public void clickConsent(){
+        consent.click();
+        LoggerUtility.info("The user clicks on consent button.");
+    }
 
 
     public void clickAlertWindow(){                 // metodele trebuie sa fie specifice clasei, deci cand le denumim sa fie sugestiv

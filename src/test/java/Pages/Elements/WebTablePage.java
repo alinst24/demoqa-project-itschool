@@ -1,10 +1,13 @@
 package Pages.Elements;
 
+import Database.Queries.WebTable;
 import Logger.LoggerUtility;
 import ObjectData.WebTableObject;
 import Pages.BasePage;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
@@ -12,8 +15,11 @@ import java.util.List;
 
 public class WebTablePage extends BasePage {
 
+    private WebTable webTable;
+
     public WebTablePage(WebDriver driver) {
         super(driver);
+        webTable= new WebTable();
     }
 
 
@@ -153,6 +159,8 @@ public class WebTablePage extends BasePage {
         LoggerUtility.info("The user clicks on submit button");
 
         validateNewEntry(actualTableSize, webTableObject);
+
+        // Inseram datele din UI in DB-ul nostru
     }
 
     //    private void validateNewEntry(Integer actualTableSize,String firstnamevalue,String lastnamevalue,String emailvalue,String agevalue,String salaryvalue,String departmentvalue){
@@ -169,3 +177,4 @@ public class WebTablePage extends BasePage {
         Assert.assertTrue(lastentryTable.contains(webTableObject.getDepartamentvaloare()));
     }
 }
+

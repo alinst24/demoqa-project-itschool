@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class PropertyUtility {
 
-    public Properties properties;                                // facem o logica pe baza careia prin faptul ca fisierul nostru extern are cam acelasi nume cu testul nostru, facem un mecanism prin care cand ruleaza testul sa caute daca exista un fisier cu acelasi nume si sa incarce automat datele
+    public Properties properties;     // facem o logica pe baza careia prin faptul ca fisierul nostru extern are cam acelasi nume cu testul nostru, facem un mecanism prin care cand ruleaza testul sa caute daca exista un fisier cu acelasi nume si sa incarce automat datele
 
 
     // facem un constructor
