@@ -161,6 +161,8 @@ public class WebTablePage extends BasePage {
         validateNewEntry(actualTableSize, webTableObject);
 
         // Inseram datele din UI in DB-ul nostru
+        webTable.insertWebTableData(webTableObject);
+        LoggerUtility.info("All the testing data were inserted into Webtable with success.");
     }
 
     //    private void validateNewEntry(Integer actualTableSize,String firstnamevalue,String lastnamevalue,String emailvalue,String agevalue,String salaryvalue,String departmentvalue){

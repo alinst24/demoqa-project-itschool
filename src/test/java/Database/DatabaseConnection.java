@@ -16,7 +16,7 @@ public class DatabaseConnection {
 
     // facem un constructor privat pentru ca folosim conceptul de Singleton
 
-    private DatabaseConnection(){
+    private DatabaseConnection(){        // in general constructorii sunt publici, dar acum il facem privat pentru a nu oferi posibilitatea din exterior sa se creeze mai multe instante
         createConnection();
     }
 
@@ -35,11 +35,11 @@ public class DatabaseConnection {
 
     // Metoda care va face o singura instanta pentru Singleton:
 
-    public static synchronized DatabaseConnection getInstance(){
+    public static synchronized DatabaseConnection getInstance(){         // metoda statica , si astfel nu avem nevoie de o instanta ca sa o putem folosi
         if (instance==null){
             instance= new DatabaseConnection();
         }
-        return instance;
+        return instance;       // ca sa fie o singura instanta;      aceasta metoda ne asigura ca daca 10 teste folosesc db-ul si apeleaza aceasta metoda , doar un singur test intra pe acest if si restul nu mai intra pt ca instanta nu mai este nula.
     }
 
     public Connection getConnection() {

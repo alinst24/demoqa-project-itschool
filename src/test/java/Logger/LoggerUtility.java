@@ -22,7 +22,7 @@ public class LoggerUtility {
 
     //metoda care logheaza pornirea unui test
 
-    public static synchronized void startTestCase(String testName) { //synchronized  = keyword care se aplica cand vrem sa blocam apelarea metodei in 2 thread-uri diferite
+    public static synchronized void startTestCase(String testName) { //synchronized  = keyword care se aplica cand vrem sa blocam apelarea metodei in 2 thread-uri diferite ; adica ne asigura ca daca 2 thread-uri apeleaza aceeasi metoda , sa nu se incurce una pe alta
 
         // apoi trebuie sa pregatim filtrarea pe baza de fisiere , iar separatorul este numele testului , linia de mai jos
         ThreadContext.put("threadName", testName);     //ThreadContext este un conccurent hashmap , diferenta dintre el si un hasmap simplu este faptul ca poate sa ne tina la nivel de synchronized , informatiile pe care le introducem intr-un hashmap  ; adauga in hashmapul respectiv , numele testului
